@@ -26,7 +26,8 @@ UNT_ER<-sum(UNT$er,na.rm = TRUE)
 VDX_ER<-sum(VDX$er,na.rm = TRUE)
 ER<-c(CAL_ER,MNZ_ER,MSK_ER,ST1_ER,ST2_ER,TRB_ER,UNT_ER,VDX_ER)
 barplot(ER,names.arg=DatasetNames,main = "ER positive cases in each dataset")
-boxplot(CAL$t.os)
+boxplot(CAL$t.os,TRB$t.os)
 
-#
-
+#Tumor size
+boxplot(CAL$size,MNZ$size,MSK$size,ST1$size,ST2$size,TRB$size,UNT$size,
+        VDX$size)
